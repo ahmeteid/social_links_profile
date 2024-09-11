@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --white: #fff;
+  --timming: 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #141414;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--white);
+  z-index: 3;
+  width: 100%;
+  display: inline-block;
+}
+
+.container {
+  width: fit-content;
+  text-align: center;
+  padding: 30px;
+  background-color: #1f1f1f;
+  margin: 10% 0;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+
+  & .social-info {
+    & img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    & h2 {
+      margin: 25px 0 10px 0;
+      color: var(--white);
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    & h3 {
+      color: hsl(75, 94%, 57%);
+      font-size: 0.9rem;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  & .contact {
+    & q {
+      color: hsl(0deg 0% 100% / 50%);
+      font-weight: 400;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      display: block;
+      text-transform: capitalize;
+    }
+
+    & .links {
+      & li {
+        background-color: #2c2c2c;
+        padding: 10px 30px;
+        cursor: pointer;
+        position: relative;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background-color: hsl(0deg 0% 12% / 38%);
+          z-index: 2;
+          transition: var(--timming);
+          -webkit-transition: var(--timming);
+          -moz-transition: var(--timming);
+          -ms-transition: var(--timming);
+          -o-transition: var(--timming);
+
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container .contact .links li::before {
+    display: block;
   }
 }
