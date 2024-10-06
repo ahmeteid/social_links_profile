@@ -47,11 +47,27 @@ a {
     & img {
       width: 150px;
       height: 150px;
+      cursor: pointer;
       border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
+      transition: var(--timming);
+      -webkit-transition: var(--timming);
+      -moz-transition: var(--timming);
+      -ms-transition: var(--timming);
+      -o-transition: var(--timming);
+
+
+      &:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+      }
+
     }
 
     & h2 {
@@ -77,6 +93,17 @@ a {
       margin-bottom: 15px;
       display: block;
       text-transform: capitalize;
+      cursor: pointer;
+      transition: var(--timming);
+      -webkit-transition: var(--timming);
+      -moz-transition: var(--timming);
+      -ms-transition: var(--timming);
+      -o-transition: var(--timming);
+
+      &:hover {
+        color: #eee;
+        font-weight: bold;
+      }
     }
 
     & .links {
