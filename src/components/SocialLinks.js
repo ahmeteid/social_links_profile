@@ -6,11 +6,11 @@ function SocialLinks() {
       <div className="container">
         <div className="social-info">
           <img src={profile} alt="profile photo" />
-          <h2>jessica randall</h2>
-          <h3>london, united kingdom</h3>
+          <h2>ahmed aslan</h2>
+          <h3>istanbul, turkey</h3>
         </div>
         <div className="contact">
-          <q>font-end developer and avid reader</q>
+          <q>font-end developer</q>
           <ul className="links">
             <li>
               <a href="https://github.com/ahmeteid" target="_blank">
